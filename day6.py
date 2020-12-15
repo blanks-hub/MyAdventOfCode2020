@@ -19,7 +19,7 @@ for group in groups:
     groupset = set(group[0])                # first "groupset" needs to be the set of the first person
     for person in group:
         personset = set([c for c in person])
-        groupset = groupset & personset     # now we can use the union set operation on the group and person set
+        groupset = groupset & personset     # now we can use the intersection set operation on the group and person set
     sum += len(groupset)                    # and only questions to which everyone answered "yes" are add to our final
                                             # groupset. Now we can sum up the counts
 print(sum)
